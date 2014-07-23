@@ -7,7 +7,7 @@ module RangeHelper
     private
     def self.get_webpage(uri_string)
       uri = URI(uri_string)
-      Net::HTTP.start uri.host do |http|
+      Net::HTTP.start(uri.host, uri.port) do |http|
         http.request_get uri.path do |response|
           response
         end

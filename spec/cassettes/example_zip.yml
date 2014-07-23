@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:9090/example.zip
+    uri: http://localhost:9090/zip/example.zip
     body:
       encoding: US-ASCII
       string: ''
@@ -14,30 +14,22 @@ http_interactions:
   response:
     status:
       code: 200
-      message: !binary |-
-        T0sg
+      message: ! 'OK '
     headers:
-      !binary "RXRhZw==":
-      - !binary |-
-        YzMzNjAtMTcyLTUzY2ViYmM1
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        YXBwbGljYXRpb24vemlw
-      !binary "Q29udGVudC1MZW5ndGg=":
-      - !binary |-
-        Mzcw
-      !binary "TGFzdC1Nb2RpZmllZA==":
-      - !binary |-
-        VHVlLCAyMiBKdWwgMjAxNCAxOTozMDoxMyBHTVQ=
-      !binary "U2VydmVy":
-      - !binary |-
-        V0VCcmljay8xLjMuMSAoUnVieS8xLjkuMy8yMDEzLTExLTIyKQ==
-      !binary "RGF0ZQ==":
-      - !binary |-
-        VHVlLCAyMiBKdWwgMjAxNCAxOTo0MjoyNSBHTVQ=
-      !binary "Q29ubmVjdGlvbg==":
-      - !binary |-
-        S2VlcC1BbGl2ZQ==
+      Etag:
+      - c3360-172-53cebbc5
+      Content-Type:
+      - application/zip
+      Content-Length:
+      - '370'
+      Last-Modified:
+      - Tue, 22 Jul 2014 19:30:13 GMT
+      Server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2013-11-22)
+      Date:
+      - Wed, 23 Jul 2014 16:08:07 GMT
+      Connection:
+      - Keep-Alive
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -51,5 +43,5 @@ http_interactions:
         X2ZpbGUudHh0VVQFAAOEu85TdXgLAAEE6AMAAAToAwAAUEsFBgAAAAACAAIA
         pQAAALcAAAAAAA==
     http_version: 
-  recorded_at: Tue, 22 Jul 2014 19:42:25 GMT
+  recorded_at: Wed, 23 Jul 2014 16:08:07 GMT
 recorded_with: VCR 2.9.2

@@ -3,8 +3,7 @@ require_relative 'spec_helper'
 describe RunTemplate do
 
   let(:rt) { RunTemplate.new }
-  grant_script_hash = {patent_prefix: "ipg", page_url: "http://www.google.com/googlebooks/uspto-patents-grants-text.html"}
-
+  grant_script_hash = {patent_prefix: "ipg", page_url: "http://localhost:9090/grant_page/grant_page.html"}
   describe "#run" do
     it "takes arguments and expands them into filenames" do
       VCR.use_cassette('grants_page') do
