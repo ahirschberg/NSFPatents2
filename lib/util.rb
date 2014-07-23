@@ -4,6 +4,6 @@ $TEMP_PATH      = $BASE_FILE_PATH + "/temp"
 
 class FilenameExtractor
   def self.extract_from_string(string)
-    string.match(/ip[ag]\d{6}/).to_s
+    File.basename(string).sub /(?:\.\w+)?\z/, ''
   end
 end
